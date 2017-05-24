@@ -24,12 +24,12 @@
 
                     <div class="form-group">
                         <label for="nome">Nome</label>
-                        <input id="nome" class="form-control" type="text" name="nome" value="{{$atore->Nome}}">
+                        <input id="nome" class="form-control" type="text" name="nome" value="{{$ator->Nome}}">
 
                     </div>
                     <div class="form-group">
                         <label for="ano">Ano nascimento</label>
-                        <input id="ano" class="form-control" type="text" name="ano" value="{{$atore->Ano}}">
+                        <input id="ano" class="form-control" type="text" name="ano" value="{{$ator->Ano}}">
 
                     </div>
 
