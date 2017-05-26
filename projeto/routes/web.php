@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/layoutsite', function () {
@@ -20,5 +20,12 @@ Route::get('/layoutsite', function () {
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('usuario.home');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/inicio', function () {
+    return view('inicio');
 });

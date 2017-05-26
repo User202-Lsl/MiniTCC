@@ -5,7 +5,7 @@
     <title> @yield('titulo') </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/738503147400892416/tZM4_3Hq.jpg" type="image/x-png"/>
+    <link rel="shortcut icon" href="logo.png" type="image/x-png"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,8 +34,30 @@
                             </div>
                             <button type="submit" class="btn btn-danger">Procurar</button>
                         </form>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Cadastro</a></li> 
+                        @if (Auth::guest())
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Cadastro</a></li> 
+                        @else
+                        <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                     </ul>
                 </div>
             </div>
