@@ -2,22 +2,25 @@
 <html lang="pt">
 
 <head>
-    <title>@yield('titulo')</title>
+    <title> @yield('titulo') </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/738503147400892416/tZM4_3Hq.jpg" type="image/x-png"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body background="http://hdimages.org/wp-content/uploads/2016/12/black-background-image-HD9.jpg">
 
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <img src="https://pbs.twimg.com/profile_images/738503147400892416/tZM4_3Hq.jpg" alt="logo" width="50">
+                    </ul>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">
-                        <img src="images/logo.png" alt="logo" width="25">
-                        <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Inicio</a></li>
                         <li><a href="#">Filmes</a></li>
                         <li><a href="#">Genêros</a></li>
@@ -36,15 +39,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>                      
-        </br>
-        </br>
-        </br>
+        </nav>  
+        
         @yield('conteudo')
+
         </br>
-        </br>
-        </br>
-        <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <nav class="navbar navbar-inverse">
             <p><font color="#FFFFFF"><center>Todos os direitos reservados</center></font></p>
         </nav>
     </div>
