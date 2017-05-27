@@ -19,13 +19,21 @@ Route::get('/layoutsite', function () {
     return view('layouts.site');
 });
 
-Route::get('/home', function () {
-    return view('usuario.home');
+Route::get('/layoutapp', function () {
+    return view('layout.app');
 });
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
 
 Route::get('/inicio', function () {
     return view('inicio');
 });
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+route::resource('/generos', 'GenreController');
+route::resource('/filmes', 'MovieController');
+route::resource('/playlists', 'PlaylistController');
+route::resource('/generos', 'GenreController');
+route::resource('/contato', 'ContactController');

@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.site')
 
-@section('content')
+@section('conteudo')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
+        <h1><font face="AR DESTINE" size="20" color="white">Cadastrar</font></h1>
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
@@ -62,7 +62,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-danger">
                                     Register
                                 </button>
                             </div>
@@ -73,4 +73,9 @@
         </div>
     </div>
 </div>
+</br>
+</br>
+</br>
+</br>
+</br>
 @endsection

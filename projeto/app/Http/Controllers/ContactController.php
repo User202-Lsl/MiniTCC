@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Genre;
+use App\Contact;
 use Illuminate\Http\Request;
 
-class GenreController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class GenreController extends Controller
      */
     public function index()
     {
-        return view('generos', compact('generos'));
+        return view('contato', compact('contato'));
     }
 
     /**
@@ -41,10 +41,10 @@ class GenreController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Genre  $genre
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Genre $genre)
+    public function show(Contact $contact)
     {
         //
     }
@@ -52,10 +52,10 @@ class GenreController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Genre  $genre
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Genre $genre)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -64,10 +64,10 @@ class GenreController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Genre  $genre
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Genre $genre)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -75,10 +75,10 @@ class GenreController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Genre  $genre
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Genre $genre)
+    public function destroy(Contact $contact)
     {
         //
     }
