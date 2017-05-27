@@ -1,0 +1,8 @@
+<div class="form-group">
+                        <label for="genero">Gênero</label>
+                        <select name="genero" id="genero" class="form-control">
+                            @foreach($generos as $genero)
+                                <option value="{{$genero->id}}">{{$genero->nome}}</option>
+                            @endforeach
+                        </select>
+                    </div>

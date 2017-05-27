@@ -14,7 +14,8 @@ class GenreController extends Controller
      */
     public function index()
     {
-        return view('generos', compact('generos'));
+        $generos = Genre::all();
+        return view('generos/index', compact('generos'));
     }
 
     /**
@@ -24,7 +25,7 @@ class GenreController extends Controller
      */
     public function create()
     {
-        //
+        return view('generos/create');
     }
 
     /**
@@ -35,7 +36,19 @@ class GenreController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //cria um novo genero
+        $genero = new Genre();
+        
+        //coloca os dados dentro do genero
+        $genero->nome = $request->nome;
+        $genero->descricao = $request->descricao;
+
+        //salva o genero
+        $genero->save();
+        
+
+        //retorna para um página qualquer
+        return redirect('/genre');
     }
 
     /**

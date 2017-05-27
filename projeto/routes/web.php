@@ -32,8 +32,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-route::resource('/generos', 'GenreController');
-route::resource('/filmes', 'MovieController');
-route::resource('/playlists', 'PlaylistController');
-route::resource('/generos', 'GenreController');
-route::resource('/contato', 'ContactController');
+route::resource('/movie', 'MovieController');
+route::resource('/playlist', 'PlaylistController');
+route::resource('/genre', 'GenreController');
+route::resource('/contact', 'ContactController');

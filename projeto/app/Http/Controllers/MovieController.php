@@ -14,7 +14,7 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return view('filmes', compact('filmes'));
+        return view('filmes/index', compact('filmes'));
     }
 
     /**
@@ -24,7 +24,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('filmes/create', compact('generos'));
     }
 
     /**
