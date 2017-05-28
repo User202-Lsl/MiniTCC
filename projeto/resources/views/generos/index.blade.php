@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('titulo')
-Generos
+Gêneros
 @endsection
 
 @section('conteudo')
@@ -10,12 +10,11 @@ Generos
 
             <div class="col-md-4">
             
-                <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Cadastro de Gêneros</font>
-                    <a href="/generos/create" class="btn btn-danger">Cadastrar</a>
-                </h1>
+                <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Gêneros</font></h1>
+
+                <p><a href="genre/create" class="btn btn-danger">Cadastrar</a></p>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dados da tabela</div>
                     <div class="panel-body">
 
                         
@@ -30,22 +29,22 @@ Generos
 
 
                             <tbody>
-                            @forelse ($generos as $genero)
+                            @forelse ($genres as $genre)
                                 <tr>
-                                    <td>{{$genero->id}}</td>
-                                    <td>{{$genero->nome}}</td>
+                                    <td>{{$genre->id}}</td>
+                                    <td>{{$genre->nome}}</td>
                                     <td>
-                                    <a class="btn btn-primary" href="/generos/{{$genero->id}}/edit">
+                                    <a class="btn btn-primary" href="/genre/{{$genre->id}}/edit">
                                             Editar
                                         </a>
 
-                                        <form style="display: inline;" action="{{route('genre.destroy', $genero->id)}}" method="post">
+                                        <form style="display: inline;" action="{{route('genre.destroy', $genre->id)}}" method="post">
                                         
                                              {{csrf_field()}}
 
                                             <input type="hidden" name="_method" value="delete">
 
-                                            <button class="btn btn-danger">Apagar</button>
+                                            <button class="btn btn-warning">Apagar</button>
 
                                         </form>
                                     </td>
@@ -64,5 +63,14 @@ Generos
             </div>
 
 </div>
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 @endsection

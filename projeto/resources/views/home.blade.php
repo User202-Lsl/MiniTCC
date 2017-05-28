@@ -8,7 +8,7 @@ Página Inicial
 
 <div class="container">
   <!-- TITULO -->
-  <h1><font face="AR DESTINE" size="20" color="white">Página Inicial</font></h1>
+  <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Página Inicial</font></h1>
 
   <!-- CAROUSEL -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -51,7 +51,7 @@ Página Inicial
 <div class="container">
   <!-- subtitulo -->
   </br>
-  <h2><font face="AR DESTINE" size="20" color="white">Mais Informações</font></h2>
+  <h2 class="page-header"><font face="AR DESTINE" size="20" color="white">Mais Informações</font></h2>
       <div class="list-group col-sm-4">
         <a href="#" class="list-group-item">
           <table class="table">
@@ -129,7 +129,7 @@ Página Inicial
 <div class="container">
   <!-- subtitulo -->
   </br>
-  <h2><font face="AR DESTINE" size="20" color="white">Desenvolvedores</font></h2>
+  <h2 class="page-header"><font face="AR DESTINE" size="20" color="white">Desenvolvedores</font></h2>
 
   <div class="col-md-4">
     <div class="thumbnail">

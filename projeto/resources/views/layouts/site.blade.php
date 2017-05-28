@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--LINKS-->                          
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-png"/>
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-png"/>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="{{ asset('css/site.css') }}" rel="stylesheet">
     <!--SCRIPTS-->
@@ -30,14 +30,14 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <img src="images/logo.png" alt="logo" width="90">
+                        <a href="/home"> <img src="/images/logo.png" alt="logo" width="90"/></a>
                     </ul>
                     <ul class="nav navbar-nav">
-                        <li><a href="home">Inicio</a></li>
-                        <li><a href="filmes">Filmes</a></li>
-                        <li><a href="generos">Genêros</a></li>
-                        <li><a href="playlists">Playlists</a></li>
-                        <li><a href="contato">Contato</a></li>
+                        <li><a href="/home">Inicio</a></li>
+                        <li><a href="/movie">Filmes</a></li>
+                        <li><a href="/genre">Gêneros</a></li>
+                        <li><a href="/playlist">Playlists</a></li>
+                        <li><a href="/contact">Contato</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <form class="navbar-form navbar-left">

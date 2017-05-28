@@ -23,6 +23,6 @@ Route::post('/form', 'SiteController@insert');
 route::get('/home', 'HomeController@index');
 Route::resource('atores', 'AtorController');
 Route::resource('filmes', 'FilmeController');
-Route::resource('genre', 'GeneroController');
+Route::resource('generos', 'GeneroController');
 
 
