@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('titulo')
-Gêneros
+Playlists
 @endsection
 
 @section('conteudo')
@@ -10,9 +10,9 @@ Gêneros
 
             <div class="col-md-6">
             
-                <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Gêneros</font></h1>
+                <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Playlists</font></h1>
 
-                <p><a href="genre/create" class="btn btn-danger">Cadastrar</a></p>
+                <p><a href="playlist/create" class="btn btn-danger">Nova Playlist</a></p>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -29,16 +29,16 @@ Gêneros
 
 
                             <tbody>
-                            @forelse ($genres as $genre)
+                            @forelse ($playlists as $playlist)
                                 <tr>
-                                    <td>{{$genre->id}}</td>
-                                    <td>{{$genre->nome}}</td>
+                                    <td>{{$playlist->id}}</td>
+                                    <td>{{$playlist->nome}}</td>
                                     <td>
-                                    <a class="btn btn-primary" href="/genre/{{$genre->id}}/edit">
-                                            Editar
+                                    <a class="btn btn-primary" href="/playlist/{{$playlist->id}}/edit">
+                                            Exibir
                                         </a>
 
-                                        <form style="display: inline;" action="{{route('genre.destroy', $genre->id)}}" method="post">
+                                        <form style="display: inline;" action="{{route('playlist.destroy', $playlist->id)}}" method="post">
                                         
                                              {{csrf_field()}}
 

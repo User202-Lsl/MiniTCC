@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Playlist;
+use App\Movie;
 use Illuminate\Http\Request;
 
 class PlaylistController extends Controller
@@ -14,7 +15,9 @@ class PlaylistController extends Controller
      */
     public function index()
     {
-        return view('playlists', compact('playlists'));
+        $playlists = Playlist::all();
+        $playlists = Playlist::with('movie')->get();
+        return view('playlists/index', compact('playlists'));
     }
 
     /**
@@ -24,7 +27,8 @@ class PlaylistController extends Controller
      */
     public function create()
     {
-        
+        $movies = Movie::all();
+        return view('playlists/create', compact('movies'));
     }
 
     /**
@@ -35,7 +39,15 @@ class PlaylistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $playlist = new Playlist();
+        $playlist->nome = $request->nome;
+        $playlist->descricao = $request->descricao;
+
+        $playlist->movie_id = $request->movie;
+        $playlist->save();
+        
+
+        return redirect('playlist');
     }
 
     /**
@@ -57,7 +69,7 @@ class PlaylistController extends Controller
      */
     public function edit(Playlist $playlist)
     {
-        //
+        return view('playlists/show', compact('playlist'));
     }
 
     /**
@@ -80,6 +92,7 @@ class PlaylistController extends Controller
      */
     public function destroy(Playlist $playlist)
     {
-        //
+        $playlist->delete();
+        return redirect('/playlist');
     }
 }
