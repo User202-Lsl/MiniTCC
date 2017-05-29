@@ -24,7 +24,7 @@ class PlaylistController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

@@ -44,9 +44,6 @@ class FilmeController extends Controller
      */
     public function store(Request $request)
     {
-
-       
-
         $filme = new Filme();
         $filme->titulo = $request->titulo;
         $filme->ano = $request->ano;

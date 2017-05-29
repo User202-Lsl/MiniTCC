@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Movie;
+use App\Genre;
 use Illuminate\Http\Request;
 
 class MovieController extends Controller
@@ -14,7 +15,9 @@ class MovieController extends Controller
      */
     public function index()
     {
-        return view('filmes/index', compact('filmes'));
+        $movies = Movie::all();
+        $movies = Movie::with('genre')->get();
+        return view('filmes/index', compact('movies'));
     }
 
     /**
@@ -24,7 +27,8 @@ class MovieController extends Controller
      */
     public function create()
     {
-        return view('filmes/create', compact('generos'));
+        $genres = Genre::all();
+        return view('filmes/create', compact('genres'));
     }
 
     /**
@@ -35,7 +39,18 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $movie = new Movie();
+        $movie->titulo = $request->titulo;
+        $movie->ano = $request->ano;
+        $movie->atorprincipal = $request->atorprincipal;
+        $movie->diretor = $request->diretor;
+        $movie->sinopse = $request->sinopse;
+
+        $movie->genre_id = $request->genre;
+        $movie->save();
+        
+
+        return redirect('movie');
     }
 
     /**
@@ -57,7 +72,7 @@ class MovieController extends Controller
      */
     public function edit(Movie $movie)
     {
-        //
+        return view('filmes/edit', compact('movie'));
     }
 
     /**
@@ -69,7 +84,16 @@ class MovieController extends Controller
      */
     public function update(Request $request, Movie $movie)
     {
-        //
+        $movie->titulo = $request->titulo;
+        $movie->ano = $request->ano;
+        $movie->atorprincipal = $request->atorprincipal;
+        $movie->diretor = $request->diretor;
+        $movie->sinopse = $request->sinopse;
+        $movie->genre_id = $request->genre;
+
+        $movie->save();
+
+        return redirect('/movie');
     }
 
     /**
@@ -80,6 +104,8 @@ class MovieController extends Controller
      */
     public function destroy(Movie $movie)
     {
-        //
+        $movie->delete();
+        return redirect('/movie');
     }
+
 }
