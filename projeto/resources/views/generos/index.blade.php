@@ -37,16 +37,33 @@ Gêneros
                                     <a class="btn btn-primary" href="/genre/{{$genre->id}}/edit">
                                             Editar
                                         </a>
-
-                                        <form style="display: inline;" action="{{route('genre.destroy', $genre->id)}}" method="post">
                                         
-                                             {{csrf_field()}}
 
-                                            <input type="hidden" name="_method" value="delete">
+                                        @if (Auth::guest())
 
-                                            <button class="btn btn-warning">Apagar</button>
+                                            <form style="display: inline;" action="/login" method="get">
+                                            
+                                                {{csrf_field()}}
 
-                                        </form>
+                                                <input type="hidden" name="_method" value="delete">
+
+                                                <button class="btn btn-warning">Apagar</button>
+                                            </form>
+                                        
+                                        @else
+
+                                            <form style="display: inline;" action="{{route('movie.destroy', $movie->id)}}" method="post">
+                                        
+                                                {{csrf_field()}}
+
+                                                <input type="hidden" name="_method" value="delete">
+
+                                                <button class="btn btn-warning">Apagar</button>
+                                            </form>
+
+                                        @endif
+
+
                                     </td>
                                 </tr>
                              @empty

@@ -40,15 +40,32 @@ Filmes
                                             Editar
                                         </a>
 
-                                        <form style="display: inline;" action="{{route('movie.destroy', $movie->id)}}" method="post">
+
+                                        @if (Auth::guest())
+
+                                            <form style="display: inline;" action="/login" method="get">
+                                            
+                                                {{csrf_field()}}
+
+                                                <input type="hidden" name="_method" value="delete">
+
+                                                <button class="btn btn-warning">Apagar</button>
+                                            </form>
                                         
-                                             {{csrf_field()}}
+                                        @else
 
-                                            <input type="hidden" name="_method" value="delete">
+                                            <form style="display: inline;" action="{{route('movie.destroy', $movie->id)}}" method="post">
+                                        
+                                                {{csrf_field()}}
 
-                                            <button class="btn btn-warning">Apagar</button>
+                                                <input type="hidden" name="_method" value="delete">
 
-                                        </form>
+                                                <button class="btn btn-warning">Apagar</button>
+                                            </form>
+
+                                        @endif
+
+
                                     </td>
                                 </tr>
                              @empty

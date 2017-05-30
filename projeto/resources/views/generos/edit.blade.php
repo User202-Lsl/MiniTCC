@@ -6,6 +6,12 @@ Alterar Gênero
 
 @section('conteudo')
 
+@if (Auth::guest())
+    <script language= "JavaScript">
+        location.href="/login"
+    </script>
+@else
+
 <div class="container">
 
             <div class="col-md-6">
@@ -36,5 +42,7 @@ Alterar Gênero
 </br>
 </br>
 </br>
+
+@endif
 
 @endsection

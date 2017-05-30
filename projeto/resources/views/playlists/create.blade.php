@@ -6,6 +6,12 @@ Playlists
 
 @section('conteudo')
 
+@if (Auth::guest())
+    <script language= "JavaScript">
+        location.href="/login"
+    </script>
+@else
+
 <div class="container">
 
             <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Nova Playlist</font></h1>
@@ -43,5 +49,7 @@ Playlists
             </div>
 
     </div>
+
+@endif
 
 @endsection

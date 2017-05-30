@@ -1,5 +1,9 @@
 @extends('layouts.site')
 
+@section('titulo')
+Login
+@endsection
+
 @section('conteudo')
 <div class="container">
     <div class="row">

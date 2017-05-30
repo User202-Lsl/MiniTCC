@@ -30,10 +30,10 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-left">
-                        <a href="/home"> <img src="/images/logo.png" alt="logo" width="90"/></a>
+                        <a href="/"> <img src="/images/logo.png" alt="logo" width="90"/></a>
                     </ul>
                     <ul class="nav navbar-nav">
-                        <li><a href="/home">Inicio</a></li>
+                        <li><a href="/">Inicio</a></li>
                         <li><a href="/movie">Filmes</a></li>
                         <li><a href="/genre">Gêneros</a></li>
                         <li><a href="/playlist">Playlists</a></li>

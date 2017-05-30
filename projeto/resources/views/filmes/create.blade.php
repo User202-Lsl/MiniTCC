@@ -6,6 +6,12 @@ Filmes
 
 @section('conteudo')
 
+@if (Auth::guest())
+    <script language= "JavaScript">
+        location.href="/login"
+    </script>
+@else
+
 <div class="container">
 
             <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Cadastro de Filmes</font></h1>
@@ -58,5 +64,7 @@ Filmes
             </div>
 
     </div>
+
+@endif
 
 @endsection
