@@ -8,7 +8,7 @@ Filmes
 
 <div class="container">
 
-            <div class="col-md-6">
+            <div class="col-md-7">
             
                 <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Filmes</font></h1>
 
@@ -36,9 +36,16 @@ Filmes
                                     <td>{{$movie->titulo}}</td>
                                     <td>{{$movie->ano}}</td>
                                     <td>
+
+                                    <a class="btn btn-success" href="/movie/{{$movie->id}}/display">
+                                            Exibir
+                                        </a>
+
                                     <a class="btn btn-primary" href="/movie/{{$movie->id}}/edit">
                                             Editar
                                         </a>
+
+                                        
 
 
                                         @if (Auth::guest())

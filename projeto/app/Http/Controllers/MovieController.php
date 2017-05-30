@@ -108,4 +108,10 @@ class MovieController extends Controller
         return redirect('/movie');
     }
 
+    public function display(Movie $movie)
+    {
+        return view('filmes/display', compact('movie'));
+    }
+
 }
+

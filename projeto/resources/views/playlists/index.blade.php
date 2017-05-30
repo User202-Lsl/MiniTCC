@@ -34,8 +34,12 @@ Playlists
                                     <td>{{$playlist->id}}</td>
                                     <td>{{$playlist->nome}}</td>
                                     <td>
-                                    <a class="btn btn-primary" href="/playlist/{{$playlist->id}}/edit">
+                                    <a class="btn btn-success" href="/playlist/{{$playlist->id}}/display">
                                             Exibir
+                                        </a>
+
+                                    <a class="btn btn-primary" href="/playlist/{{$playlist->id}}/edit">
+                                            Editar
                                         </a>
 
 
@@ -52,7 +56,7 @@ Playlists
                                         
                                         @else
 
-                                            <form style="display: inline;" action="{{route('movie.destroy', $movie->id)}}" method="post">
+                                            <form style="display: inline;" action="{{route('playlist.destroy', $playlist->id)}}" method="post">
                                         
                                                 {{csrf_field()}}
 

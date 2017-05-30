@@ -69,7 +69,7 @@ class PlaylistController extends Controller
      */
     public function edit(Playlist $playlist)
     {
-        return view('playlists/show', compact('playlist'));
+        return view('playlists/edit', compact('playlist'));
     }
 
     /**
@@ -81,7 +81,12 @@ class PlaylistController extends Controller
      */
     public function update(Request $request, Playlist $playlist)
     {
-        //
+        $playlist->nome = $request->nome;
+        $playlist->descricao = $request->descricao;
+
+        $playlist->save();
+
+        return redirect('/playlist');
     }
 
     /**
@@ -94,5 +99,10 @@ class PlaylistController extends Controller
     {
         $playlist->delete();
         return redirect('/playlist');
+    }
+
+    public function display(Playlist $playlist)
+    {
+        return view('playlists/display', compact('playlist'));
     }
 }
