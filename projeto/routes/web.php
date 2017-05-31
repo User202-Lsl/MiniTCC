@@ -36,6 +36,6 @@ route::resource('/movie', 'MovieController');
     Route::get('/movie/{movie}/display', 'MovieController@display');
 route::resource('/playlist', 'PlaylistController');
     Route::get('/playlist/{playlist}/display', 'PlaylistController@display');
-    Route::get('/playlist/add', 'PlaylistController@add');
+    Route::get('/playlist/add', 'PlaylistController@add')->name('playlist.add');
 route::resource('/genre', 'GenreController');
 route::resource('/contact', 'ContactController');
