@@ -30,18 +30,6 @@ Playlists
                         <label for="descricao"><font color="white">Descrição</font></label>
                         <input id="descricao" class="form-control" type="text" name="descricao" placeholder="">
                     </div>
-
-                    <div class="form-group">
-                        <label for="movie"><font color="white">Filme</font></label>
-                        <select name="movie" id="movie" class="form-control">
-                            
-                            @foreach($movies as $movie)
-                                <option value="{{$movie->id}}">{{$movie->titulo}}</option>
-                            @endforeach
-                            
-                        
-                        </select>
-                    </div>
                    
                     <button type="submit" class="btn btn-danger">Criar</button>
 

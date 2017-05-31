@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Playlist extends Model
 {
-    public function movie()
+    public function movies()
     {
-        return $this->belongsTo('App\Movie');
+        return $this->belongsToMany("App\Movie");
     }
 }

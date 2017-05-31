@@ -52,7 +52,7 @@ Gêneros
                                         
                                         @else
 
-                                            <form style="display: inline;" action="{{route('movie.destroy', $movie->id)}}" method="post">
+                                            <form style="display: inline;" action="{{route('genre.destroy', $genre->id)}}" method="post">
                                         
                                                 {{csrf_field()}}
 

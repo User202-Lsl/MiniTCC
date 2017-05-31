@@ -21,6 +21,19 @@
             <p><strong>Diretor:</strong>{{$movie->diretor}}</p>
             <p><strong>Ano De Lancamento:</strong>{{$movie->ano}}</p>
             <p><strong>Gênero:</strong>{{$movie->genre_id}}</p>
+            <form action="{{ route('playlist.add')}}" method="post">
+             <div class="form-group">
+                        <label for="playlist"><font color="white">Playlists</font></label>
+                        <select name="playlist" id="playlist" class="form-control">
+                            
+                            @foreach($playlists as $playlist)
+                                <option value="{{$playlist->id}}">{{$playlist->nome}}</option>
+                            @endforeach
+                            
+                        
+                        </select>
+            </div>
+          </form>
           </div>
         </div>
       </div>

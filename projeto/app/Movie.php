@@ -12,6 +12,6 @@ class Movie extends Model
     }
     public function playlists()
     {
-        return $this->hasMany('App\Playlist');
+        return $this->belongsToMany("App\Playlist", "movies_playlists", "movie_id", "playlist_id");
     }
 }

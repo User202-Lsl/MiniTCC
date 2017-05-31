@@ -43,7 +43,6 @@ class PlaylistController extends Controller
         $playlist->nome = $request->nome;
         $playlist->descricao = $request->descricao;
 
-        $playlist->movie_id = $request->movie;
         $playlist->save();
         
 
@@ -104,5 +103,13 @@ class PlaylistController extends Controller
     public function display(Playlist $playlist)
     {
         return view('playlists/display', compact('playlist'));
+    }
+
+    public function add()
+    {
+        $movies = Movie::all();
+        $playlists = Playlist::all();
+        
+        return view('playlists/add', compact("playlists"), compact("movies"));
     }
 }
