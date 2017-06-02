@@ -25,12 +25,12 @@ Alterar Gênero
 
                     <div class="form-group">
                         <label for="nome"><font color="white">Nome</font></label>
-                        <input id="nome" class="form-control" type="text" name="nome" placeholder="{{$genre->nome}}">
+                        <input id="nome" class="form-control" type="text" name="nome" value="{{$genre->nome}}">
                     </div>
 
                     <div class="form-group">
                         <label for="descricao"><font color="white">Descrição</font></label>
-                        <textarea rows="5" cols="50" class="form-control" type="text" name="descricao" id="descricao" placeholder="{{$genre->descricao}}"></textarea>
+                        <textarea rows="5" cols="50" class="form-control" type="text" name="descricao" id="descricao" value="{{$genre->descricao}}"></textarea>
                     </div>
                    
                     <button type="submit" class="btn btn-danger">Enviar</button>

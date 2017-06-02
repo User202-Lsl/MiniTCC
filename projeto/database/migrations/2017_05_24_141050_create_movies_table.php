@@ -20,7 +20,9 @@ class CreateMoviesTable extends Migration
             $table->integer('ano');
             $table->string('atorprincipal');
             $table->string('diretor');
-            $table->string('sinopse');
+            $table->string('sinopse', 500);
+            $table->string('image');
+            $table->string('video');
             $table->integer('genre_id')->unsigned();
             $table->timestamps();
 

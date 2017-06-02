@@ -105,11 +105,9 @@ class PlaylistController extends Controller
         return view('playlists/display', compact('playlist'));
     }
 
-    public function add()
+    public function add(Request $request)
     {
-        $movies = Movie::all();
-        $playlists = Playlist::all();
         
-        return view('playlists/add', compact("playlists"), compact("movies"));
+        return view('filmes', compact("playlists"), compact("movies"));
     }
 }

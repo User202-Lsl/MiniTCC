@@ -57,6 +57,16 @@ Filmes
                         
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="image"><font color="white">Imagem Representativa</font></label>
+                        <input id="image" class="form-control" type="text" name="image" placeholder="www.myimage.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="video"><font color="white">Imagem Representativa</font></label>
+                        <input id="video" class="form-control" type="text" name="video" placeholder="www.myvideo.com">
+                    </div>
                    
                     <button type="submit" class="btn btn-danger">Cadastrar</button>
 
