@@ -59,13 +59,18 @@ Filmes
                     </div>
 
                     <div class="form-group">
-                        <label for="image"><font color="white">Imagem Representativa</font></label>
+                        <label for="image"><font color="white">Endereço de Imagem Representativa</font></label>
                         <input id="image" class="form-control" type="text" name="image" placeholder="www.myimage.com">
                     </div>
 
                     <div class="form-group">
-                        <label for="video"><font color="white">Imagem Representativa</font></label>
+                        <label for="video"><font color="white">Endereço de Trailer (YouTube)</font></label>
                         <input id="video" class="form-control" type="text" name="video" placeholder="www.myvideo.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nota"><font color="white"></font></label>
+                        <input id="nota" class="form-control" type="hidden" name="nota" value=0 >
                     </div>
                    
                     <button type="submit" class="btn btn-danger">Cadastrar</button>

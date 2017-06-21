@@ -22,7 +22,7 @@
     </script>
 </head>
 
-<body background="http://hdimages.org/wp-content/uploads/2016/12/black-background-image-HD9.jpg">
+<body background="https://www.androidcentral.com/sites/androidcentral.com/files/styles/w550h500/public/wallpapers/pure-black-wallpaper-159.jpg?itok=F7s-qzpr">
 
     <!--MENU-->
     <div class="container">
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search">
                             </div>
-                            <button type="submit" class="btn btn-danger">Procurar</button>
+                            <button type="submit" class="btn btn-Default">Procurar</button>
                         </form>
                         @if (Auth::guest())
                         <li><a href="/login">Login</a></li>

@@ -23,6 +23,7 @@ class CreateMoviesTable extends Migration
             $table->string('sinopse', 500);
             $table->string('image');
             $table->string('video');
+            $table->double('nota');
             $table->integer('genre_id')->unsigned();
             $table->timestamps();
 

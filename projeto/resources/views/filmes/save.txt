@@ -33,3 +33,6 @@
                         </select>
             </div>
           </form>
+
+          $movie_playlist->movie_id = Movie::find($movie->id);
+        $movie_playlist->playlist_id = Playlist::find($playlist->id);

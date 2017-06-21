@@ -59,6 +59,21 @@ Alterar Filme
                         
                         </select>
                     </div>
+
+                    <div class="form-group">
+                        <label for="image"><font color="white">Endereço de Imagem Representativa</font></label>
+                        <input id="image" class="form-control" type="text" name="image" placeholder="www.myimage.com" value="{{$movie->image}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="video"><font color="white">Endereço de trailer (YouTube)</font></label>
+                        <input id="video" class="form-control" type="text" name="video" placeholder="www.myvideo.com" value="{{$movie->video}}">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nota"><font color="white"></font></label>
+                        <input id="nota" class="form-control" type="hidden" name="nota" value=0 >
+                    </div>
                    
                     <button type="submit" class="btn btn-danger">Enviar</button>
                 </form>

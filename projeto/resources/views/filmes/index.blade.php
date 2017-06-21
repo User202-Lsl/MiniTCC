@@ -12,7 +12,7 @@ Filmes
             
                 <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Filmes</font></h1>
 
-                <p><a href="movie/create" class="btn btn-danger">Cadastrar</a></p>
+                <p><a href="movie/create" class="btn btn-primary">Cadastrar</a></p>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -22,9 +22,8 @@ Filmes
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
                                     <th>Titulo</th>
-                                    <th>Ano de Lançamento</th>
+                                    <th>Gênero</th>
                                 </tr>
                             </thead>
 
@@ -32,16 +31,15 @@ Filmes
                             <tbody>
                             @forelse ($movies as $movie)
                                 <tr>
-                                    <td>{{$movie->id}}</td>
                                     <td>{{$movie->titulo}}</td>
-                                    <td>{{$movie->ano}}</td>
+                                    <td>{{$movie->genre->nome}}</td>
                                     <td>
 
                                     <a class="btn btn-success" href="/movie/{{$movie->id}}/display">
                                             Exibir
                                         </a>
 
-                                    <a class="btn btn-primary" href="/movie/{{$movie->id}}/edit">
+                                    <a class="btn btn-warning" href="/movie/{{$movie->id}}/edit">
                                             Editar
                                         </a>
 
@@ -67,7 +65,7 @@ Filmes
 
                                                 <input type="hidden" name="_method" value="delete">
 
-                                                <button class="btn btn-warning">Apagar</button>
+                                                <button class="btn btn-danger">Apagar</button>
                                             </form>
 
                                         @endif
@@ -90,9 +88,6 @@ Filmes
 
 </div>
 
-</br>
-</br>
-</br>
 </br>
 </br>
 </br>

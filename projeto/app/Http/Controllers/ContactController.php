@@ -24,7 +24,8 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        $contacts = Contact::all();
+        return view('administrador/index', compact('contacts'));
     }
 
     /**
@@ -35,7 +36,14 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $contact = new Contact();
+        
+        $contact->assunto = $request->assunto;
+        $contact->mensagem = $request->mensagem;
+
+        $contact->save();
+
+        return redirect('/home');
     }
 
     /**
@@ -80,6 +88,12 @@ class ContactController extends Controller
      */
     public function destroy(Contact $contact)
     {
-        //
+        $contact->delete();
+        return redirect('/contact/create');
+    }
+
+    public function display(Contact $contact)
+    {
+        return view('administrador/display', compact('contact'));
     }
 }

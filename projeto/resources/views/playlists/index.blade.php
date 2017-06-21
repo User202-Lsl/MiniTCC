@@ -12,7 +12,7 @@ Playlists
             
                 <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Playlists</font></h1>
 
-                <p><a href="playlist/create" class="btn btn-danger">Nova Playlist</a></p>
+                <p><a href="playlist/create" class="btn btn-primary">Nova Playlist</a></p>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -38,7 +38,7 @@ Playlists
                                             Exibir
                                         </a>
 
-                                    <a class="btn btn-primary" href="/playlist/{{$playlist->id}}/edit">
+                                    <a class="btn btn-warning" href="/playlist/{{$playlist->id}}/edit">
                                             Editar
                                         </a>
 
@@ -51,7 +51,7 @@ Playlists
 
                                                 <input type="hidden" name="_method" value="delete">
 
-                                                <button class="btn btn-warning">Apagar</button>
+                                                <button class="btn btn-danger">Apagar</button>
                                             </form>
                                         
                                         @else
@@ -62,7 +62,7 @@ Playlists
 
                                                 <input type="hidden" name="_method" value="delete">
 
-                                                <button class="btn btn-warning">Apagar</button>
+                                                <button class="btn btn-danger">Apagar</button>
                                             </form>
 
                                         @endif

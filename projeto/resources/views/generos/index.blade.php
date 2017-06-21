@@ -12,7 +12,7 @@ Gêneros
             
                 <h1 class="page-header"><font face="AR DESTINE" size="20" color="white">Gêneros</font></h1>
 
-                <p><a href="genre/create" class="btn btn-danger">Cadastrar</a></p>
+                <p><a href="genre/create" class="btn btn-primary">Cadastrar</a></p>
 
                 <div class="panel panel-default">
                     <div class="panel-body">
@@ -34,7 +34,7 @@ Gêneros
                                     <td>{{$genre->id}}</td>
                                     <td>{{$genre->nome}}</td>
                                     <td>
-                                    <a class="btn btn-primary" href="/genre/{{$genre->id}}/edit">
+                                    <a class="btn btn-warning" href="/genre/{{$genre->id}}/edit">
                                             Editar
                                         </a>
                                         
@@ -47,7 +47,7 @@ Gêneros
 
                                                 <input type="hidden" name="_method" value="delete">
 
-                                                <button class="btn btn-warning">Apagar</button>
+                                                <button class="btn btn-danger">Apagar</button>
                                             </form>
                                         
                                         @else
@@ -58,7 +58,7 @@ Gêneros
 
                                                 <input type="hidden" name="_method" value="delete">
 
-                                                <button class="btn btn-warning">Apagar</button>
+                                                <button class="btn btn-danger">Apagar</button>
                                             </form>
 
                                         @endif

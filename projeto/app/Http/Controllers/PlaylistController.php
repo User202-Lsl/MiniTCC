@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Playlist;
 use App\Movie;
+use App\Pivo;
 use Illuminate\Http\Request;
 
 class PlaylistController extends Controller
@@ -42,6 +43,11 @@ class PlaylistController extends Controller
         $playlist = new Playlist();
         $playlist->nome = $request->nome;
         $playlist->descricao = $request->descricao;
+        $playlist->filme1 = $request->movie1;
+        $playlist->filme2 = $request->movie2;
+        $playlist->filme3 = $request->movie3;
+        $playlist->filme4 = $request->movie4;
+        $playlist->filme5 = $request->movie5;
 
         $playlist->save();
         
@@ -68,7 +74,8 @@ class PlaylistController extends Controller
      */
     public function edit(Playlist $playlist)
     {
-        return view('playlists/edit', compact('playlist'));
+        $movies = Movie::all();
+        return view('playlists/edit', compact('playlist', 'movies'));
     }
 
     /**
@@ -82,6 +89,11 @@ class PlaylistController extends Controller
     {
         $playlist->nome = $request->nome;
         $playlist->descricao = $request->descricao;
+        $playlist->filme1 = $request->movie1;
+        $playlist->filme2 = $request->movie2;
+        $playlist->filme3 = $request->movie3;
+        $playlist->filme4 = $request->movie4;
+        $playlist->filme5 = $request->movie5;
 
         $playlist->save();
 
@@ -102,12 +114,8 @@ class PlaylistController extends Controller
 
     public function display(Playlist $playlist)
     {
-        return view('playlists/display', compact('playlist'));
-    }
 
-    public function add(Request $request)
-    {
-        
-        return view('filmes', compact("playlists"), compact("movies"));
+        return view('playlists/display', compact('playlist','movies'));
     }
+    
 }

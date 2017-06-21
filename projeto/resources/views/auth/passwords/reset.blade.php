@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.site')
 
-@section('content')
+@section('titulo')
+Login
+@endsection
+
+@section('conteudo')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

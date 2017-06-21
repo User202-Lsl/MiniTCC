@@ -30,7 +30,7 @@ Alterar Gênero
 
                     <div class="form-group">
                         <label for="descricao"><font color="white">Descrição</font></label>
-                        <textarea rows="5" cols="50" class="form-control" type="text" name="descricao" id="descricao" value="{{$genre->descricao}}"></textarea>
+                        <textarea rows="5" cols="50" class="form-control" type="text" name="descricao" id="descricao">{{$genre->descricao}}</textarea>
                     </div>
                    
                     <button type="submit" class="btn btn-danger">Enviar</button>

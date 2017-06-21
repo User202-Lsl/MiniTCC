@@ -51,7 +51,7 @@ class MovieController extends Controller
         $movie->sinopse = $request->sinopse;
         $movie->image = $request->image;
         $movie->video = $request->video;
-
+        $movie->nota = $request->nota;
         $movie->genre_id = $request->genre;
 
         $movie->save();
@@ -98,6 +98,9 @@ class MovieController extends Controller
         $movie->atorprincipal = $request->atorprincipal;
         $movie->diretor = $request->diretor;
         $movie->sinopse = $request->sinopse;
+        $movie->image = $request->image;
+        $movie->video = $request->video;
+        $movie->nota = $request->nota;
         $movie->genre_id = $request->genre;
 
         $movie->save();
@@ -119,9 +122,77 @@ class MovieController extends Controller
 
     public function display(Movie $movie)
     {
-        $movies = Movie::with('genre')->get();
-        $playlists = Playlist::all();
         return view('filmes/display', compact('movie'), compact('playlists'));
+    }
+
+    public function nota1(Request $request, Movie $movie)
+    {
+        if($movie->nota != 0){
+        $result = $movie->nota + 1;
+        $result2 = $result / 2;
+        $movie->nota = $result2;
+        }else{
+        $movie->nota = 1;
+        }
+        $movie->save();
+
+        return redirect('/movie/'.$movie->id.'/display');
+    }
+
+    public function nota2(Request $request, Movie $movie)
+    {
+        if($movie->nota != 0){
+        $result = $movie->nota + 2;
+        $result2 = $result / 2;
+        $movie->nota = $result2;
+        }else{
+        $movie->nota = 2;
+        }
+        $movie->save();
+
+        return redirect('/movie/'.$movie->id.'/display');
+    }
+
+    public function nota3(Request $request, Movie $movie)
+    {
+        if($movie->nota != 0){
+        $result = $movie->nota + 3;
+        $result2 = $result / 2;
+        $movie->nota = $result2;
+        }else{
+        $movie->nota = 3;
+        }
+        $movie->save();
+
+        return redirect('/movie/'.$movie->id.'/display');
+    }
+
+    public function nota4(Request $request, Movie $movie)
+    {
+        if($movie->nota != 0){
+        $result = $movie->nota + 4;
+        $result2 = $result / 2;
+        $movie->nota = $result2;
+        }else{
+        $movie->nota = 4;
+        }
+        $movie->save();
+
+        return redirect('/movie/'.$movie->id.'/display');
+    }
+
+    public function nota5(Request $request, Movie $movie)
+    {
+        if($movie->nota != 0){
+        $result = $movie->nota + 5;
+        $result2 = $result / 2;
+        $movie->nota = $result2;
+        }else{
+        $movie->nota = 5;
+        }   
+        $movie->save();
+
+        return redirect('/movie/'.$movie->id.'/display');
     }
 
 }

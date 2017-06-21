@@ -17,6 +17,11 @@ class CreatePlaylistsTable extends Migration
            $table->increments('id');
             $table->string('nome');
             $table->string('descricao'); 
+            $table->string('filme1');
+            $table->string('filme2');
+            $table->string('filme3');
+            $table->string('filme4');
+            $table->string('filme5');
             $table->timestamps();
         });
     }

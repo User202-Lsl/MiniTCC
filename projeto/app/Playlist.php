@@ -8,6 +8,6 @@ class Playlist extends Model
 {
     public function movie()
     {
-        return $this->belongsToMany("App\Movie");
+        return $this->belongsTo("App\Movie");
     }
 }
